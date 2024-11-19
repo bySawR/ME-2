@@ -78,6 +78,7 @@ a {
   display: flex; /* Makes the container a flex container */
   padding: 24px 64px;
   font-size: 3rem;
+  align-items: flex-end;
 }
 
 .project-list {
@@ -282,5 +283,14 @@ video {
 
   .footer-social {
     margin-top: 16px;
+  }
+  .project-wrapper {
+    flex: 100%;
+  }
+  .content,
+  header,
+  .hero,
+  .footer {
+    padding: 24px;
   }
 }
