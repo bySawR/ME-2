@@ -13,6 +13,42 @@
     <link rel="manifest" href="site.webmanifest">
 </head>
 
-<body>
-    <nav>Marcus Evensen</nav>
+<body class="yellow">
+    <header>
+        <div class="container">
+            <a href="/" class="logo">Marcus Evensen</a>
+            <button class="menu-button" aria-label="Åpne meny" id="menuButton">
+                Meny
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="32" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                    class="menu-icon">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div class="side-menu" id="sideMenu">
+        <button class="close-button" aria-label="Lukk meny" id="closeButton">&times;</button>
+        <ul class="menu-items">
+            <li><a href="#">Tjenester</a></li>
+            <li><a href="#">Prosjekter</a></li>
+            <li><a href="#">Kontakt</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="project-list">
+            <div class="project-wrapper">
+                <img src="placeholder.svg" alt="Satoshi">
+                <div class="project-title">Digdir</div>
+            </div>
+            <div class="project-wrapper">
+                <img src="placeholder.svg" alt="Satoshi">
+                <div class="project-title">Satoshi</div>
+            </div>
+        </div>
+    </div>
 </body>
+<script src=" meny.js"></script>
