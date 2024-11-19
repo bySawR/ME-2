@@ -28,14 +28,26 @@
   color: var(--black);
 }
 
+.beige {
+  background-color: var(--beige);
+  color: var(--black);
+}
+
 * {
   font-family: "Satoshi-Regular";
 }
 
 header {
   font-size: 2rem;
-  padding: 24px 64px;
   max-width: 100vw;
+  padding: 24px 64px;
+}
+
+img,
+video {
+  border-radius: 16px;
+  overflow: hidden;
+  object-fit: cover;
 }
 
 body {
@@ -44,10 +56,10 @@ body {
   margin: 0 auto;
 }
 
-a:hover {
-  background-color: #00000036;
+a {
+  color: inherit;
+  text-decoration: inherit;
 }
-
 .container {
   margin: 0 auto;
   display: flex;
@@ -58,20 +70,42 @@ a:hover {
 .content {
   display: flex; /* Makes the container a flex container */
   justify-content: center; /* Optional: centers the content horizontally */
+  min-height: 100vh;
+  padding: 48px 64px;
+}
+
+.hero {
+  display: flex; /* Makes the container a flex container */
   padding: 24px 64px;
+  font-size: 3rem;
 }
 
 .project-list {
   display: flex; /* This makes the project items inside flex */
-  flex: 50%; /* Ensures this element takes up 50% of the container */
-  gap: 24px;
+  gap: 36px;
+  flex-wrap: wrap;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.project-wrapper.visible {
+  opacity: 1;
+  transform: translateY(0); /* Reset position */
 }
 
 .project-wrapper {
-  margin-bottom: 1rem; /* Optional: adds space between project items */
+  flex: calc(50% - 36px);
+  opacity: 0; /* Initially invisible */
+  transform: translateY(
+    50px
+  ); /* Slightly offset to make the fade-in more noticeable */
+  transition: opacity 0.8s ease, transform 0.8s ease; /* Fade-in/out and slide effect */
 }
 
-.project-wrapper img {
+.project-wrapper img,
+video {
   width: 100%;
 }
 
@@ -102,7 +136,7 @@ a:hover {
   width: 500px;
   height: 100%;
   background-color: var(--pink);
-  transition: right 0.3s ease-in-out;
+  transition: right 0.3s ease;
   z-index: 1000;
 }
 .side-menu.open {
@@ -129,5 +163,124 @@ a:hover {
 .menu-items a {
   text-decoration: none;
   color: var(--black);
-  font-size: 4rem;
+  font-size: 2rem;
+}
+
+/* Footer styles */
+.footer {
+  background-color: var(--pink);
+  padding: 48px 64px;
+  color: var(--black);
+}
+
+.footer-top {
+  margin-bottom: 64px;
+}
+
+.footer-heading {
+  font-size: 2rem;
+  font-weight: 500;
+  transform: rotate(-8deg);
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+.footer-cta {
+  display: inline-flex;
+  align-items: center;
+  font-size: 3rem;
+  text-decoration: none;
+  color: var(--black);
+  transition: opacity 0.3s;
+}
+
+.footer-cta:hover {
+  opacity: 0.7;
+}
+
+.footer-cta svg {
+  margin-left: 8px;
+  transition: transform 0.3s;
+}
+
+.footer-cta:hover svg {
+  transform: translateX(4px);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 32px;
+  margin-bottom: 64px;
+}
+
+.footer-section h3 {
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.footer-section p,
+.footer-section a {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--black);
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.footer-section a:hover {
+  opacity: 0.7;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 32px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.footer-legal a,
+.footer-legal span {
+  font-size: 0.875rem;
+  color: var(--black);
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.footer-legal a:hover {
+  opacity: 0.7;
+}
+
+.footer-social {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-social a {
+  color: var(--black);
+  transition: opacity 0.3s;
+}
+
+.footer-social a:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-social {
+    margin-top: 16px;
+  }
 }
