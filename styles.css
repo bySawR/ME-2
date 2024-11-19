@@ -153,18 +153,47 @@ video {
   cursor: pointer;
 }
 .menu-items {
-  padding: 4rem;
   list-style-type: none;
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 3em;
+  gap: 0em;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
 }
 
 .menu-items a {
   text-decoration: none;
   color: var(--black);
   font-size: 2rem;
+  position: relative;
+  display: block; /* Ensure the link spans the entire menu item */
+  padding: 1rem; /* Add padding for better clickable area */
+  overflow: hidden; /* Prevent any overflow caused by the pseudo-element */
+}
+
+.menu-items a:hover {
+  color: var(--black); /* Change text color if needed */
+}
+
+.menu-items a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%; /* Start outside the view */
+  width: 100%;
+  height: 100%;
+  background-color: var(--green); /* Rectangle color */
+  background-size: 1.1em 1.1em; /* Adjust size of the SVG */
+  background-repeat: no-repeat;
+  background-position: right 1rem center; /* Adjust SVG position */
+  z-index: -1; /* Place the rectangle behind the text */
+  transition: left 0.4s ease; /* Smooth animation */
+}
+
+.menu-items a:hover::after {
+  left: 0; /* Slide in to cover the entire menu item */
 }
 
 /* Footer styles */
