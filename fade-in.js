@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }, {
-        threshold: 0.5, // Trigger when 50% of the element is in the viewport
+        threshold: 0.2, // Trigger when 50% of the element is in the viewport
     });
 
     // Target all .project-wrapper elements for observation

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Marcus Evensen</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="satoshi.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <script src="fade-in.js"></script>
+</head>
+
+<body class="yellow">
+    <header>
+        <div class="container">
+            <a href="/" class="logo">Marcus Evensen</a>
+            <button class="menu-button" aria-label="Åpne meny" id="menuButton">
+                Meny
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="32" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                    class="menu-icon">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div class="side-menu" id="sideMenu">
+        <button class="close-button" aria-label="Lukk meny" id="closeButton">&times;</button>
+        <ul class="menu-items">
+            <li><a href="tjenester.html">Tjenester</a></li>
+            <li><a href="prosjekter.html">Prosjekter</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </div>
+
+    <div class="hero">
+        Ta kontakt
+    </div>
+
+    <div class="content">
+        <div class="contact-form">
+            <h2>La oss lage noe kult sammen!</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Navn</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-post</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Melding</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send melding</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <!-- Footer content (same as in index.html) -->
+    </footer>
+
+    <script src="meny.js"></script>
+</body>
+
+</html>
