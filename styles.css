@@ -6,6 +6,15 @@
   --white: #f3f3f3;
   --black: #000000;
   --beige: #ccc4af;
+  --digdir-theme: #ffd9da;
+}
+
+.white {
+  background: white;
+}
+
+.digdir-theme {
+  background-color: var(--digdir-theme);
 }
 
 .yellow {
@@ -46,7 +55,6 @@ header {
 
 img,
 video {
-  border-radius: 16px;
   overflow: hidden;
   object-fit: cover;
 }
@@ -71,6 +79,13 @@ a {
 .content {
   display: flex; /* Makes the container a flex container */
   justify-content: center; /* Optional: centers the content horizontally */
+  min-height: 100vh;
+  padding: 48px 64px;
+}
+
+.case-content {
+  display: flex; /* Makes the container a flex container */
+  flex-direction: column;
   min-height: 100vh;
   padding: 48px 64px;
 }
@@ -324,3 +339,109 @@ video {
     padding: 24px;
   }
 }
+
+
+.fullwidth img {
+  width: 100%;
+  padding: 0!important;
+  margin-bottom: -10px!important;
+}
+
+.case-content .fullwidth {
+  padding: 0px!important;
+}
+
+
+section {
+  min-height: 100vh;
+  margin: 0;
+}
+
+section img, video {
+  width: 100%;
+  padding: 0;
+}
+
+.column-50 {
+  width: 50%;
+}
+
+.column-50 img {
+  width: 100%;
+}
+
+#losning, #konsept {
+  display: flex;
+  align-items: center;
+}
+
+#logo-reveal {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.project-desc {
+  font-size: 1.4em;
+  line-height: 1.6em;
+}
+
+.column-100 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote-text {
+  font-size: 2.5em;
+  line-height: 1.6em;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+}
+
+#image-double {
+display: flex;
+gap: 24px;
+}
+
+
+#single-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  #info {
+    display: flex;
+    gap: 24px;
+  }
+
+  .intro-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+  }
+
+  .info-outer {
+    font-size: 1.4em;
+    line-height: 1.6em;
+    width: 60%;
+  }
+
+  .project-h2 {
+    padding: 0;
+    font-weight: 400;
+    margin: 0;
+  }
+
+ .project-title {
+  font-size: 2.4em;
+  line-height: 1.6em;
+  margin: 0;
+  font-weight: 600;
+  }
