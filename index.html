@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marcus Evensen</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="satoshi.css">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=block" rel="stylesheet">
     <script src="fade-in.js"></script>
 </head>
 
@@ -33,9 +35,9 @@
     <div class="side-menu" id="sideMenu">
         <button class="close-button" aria-label="Lukk meny" id="closeButton">&times;</button>
         <ul class="menu-items">
-            <li><a href="#">Tjenester</a></li>
-            <li><a href="#">Prosjekter</a></li>
-            <li><a href="#">Kontakt</a></li>
+            <li><a href="tjenester.html">Tjenester</a></li>
+            <li><a href="prosjekter.html">Prosjekter</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
     </div>
     <div class="hero">Jeg lager løsninger som får deg til å lykkes<br>– fra idé til gjennomføring.
@@ -43,29 +45,10 @@
     <div class="content">
         <div class="project-list">
             <div class="project-wrapper">
-                <a href="link-to-digdir-page.html">
+                <a href="/prosjekter/digdir.html">
                     <video src="/prosjekter/digdir/Digdir Animasjon.webm" class="square" autoplay muted loop
                         loading="lazy" preload="metadata"></video>
                     <div class="project-title">Digdir</div>
-                </a>
-            </div>
-            <div class="project-wrapper">
-                <a href="link-to-satoshi-page.html">
-                    <img src="placeholder.svg" alt="Satoshi">
-                    <div class="project-title">Satoshi</div>
-                </a>
-            </div>
-            <div class="project-wrapper">
-                <a href="link-to-digdir-page.html">
-                    <video src="/prosjekter/digdir/Digdir Animasjon.webm" class="square" autoplay muted loop
-                        loading="lazy" preload="metadata"></video>
-                    <div class="project-title">Digdir</div>
-                </a>
-            </div>
-            <div class="project-wrapper">
-                <a href="link-to-satoshi-page.html">
-                    <img src="placeholder.svg" alt="Satoshi">
-                    <div class="project-title">Satoshi</div>
                 </a>
             </div>
         </div>
@@ -73,7 +56,7 @@
     <footer class="footer">
         <div class="container-footer">
             <div class="footer-top">
-                <a href="/contact" class="footer-cta">
+                <a href="/kontakt" class="footer-cta">
                     La oss lage noe kult sammen!
                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -87,7 +70,7 @@
                 <div class="footer-section">
                     <h3>Kontakt</h3>
                     <p>Marcus Evensen</p>
-                    <a href="mailto:hei@marcusevensen.no">hei@marcusevensen.no</a>
+                    <p>hei@marcusevensen.no</p>
                     <p>+47 92 22 03 96</p>
                     <p><strong>Lokasjon</strong></p>
                     <p>Oslo, Norge</p>
@@ -95,25 +78,17 @@
 
                 <div class="footer-section">
                     <h3>Hva jeg kan hjelpe med</h3>
-                    <a href="/services/web-development">Nettutvikling</a>
-                    <a href="/services/graphic-design">Grafisk design</a>
-                    <a href="/services/branding">Merkevarebygging</a>
-                    <a href="/services/ui-design">UI-design</a>
+                    <p>Nettutvikling</p>
+                    <p>Grafisk design</p>
+                    <p>Merkevarebygging</p>
+                    <p>UI-design</a>
                 </div>
 
-                <div class="footer-section">
-                    <h3>Generelt</h3>
-                    <a href="/about">Om meg</a>
-                    <a href="/blog">Kontakt</a>
-                    <a href="/portfolio">Prosjekter</a>
-                    <a href="/process">Arbeidsprosess</a>
-
-                </div>
 
                 <div class="footer-section">
                     <h3>Priser</h3>
-                    <a href="#">Gull Farmandprisen X1</a>
-                    <a href="#">Bronse Farmandprisen X2</a>
+                    <p>Gull Farmandprisen X1</p>
+                    <p>Bronse Farmandprisen X2</p>
                 </div>
             </div>
 
