@@ -90,6 +90,40 @@ a {
   padding: 48px 64px;
 }
 
+#contact-page {
+  padding: 48px 64px;
+  display: flex;
+}
+
+.contact-card {
+  display: flex;
+}
+
+.contact-card img {
+  width: 100%;
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.contact-text p, .contact-text a {
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+    line-height: 1.6em;
+}
+
+.contact-text h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin: 0;
+}
+
 .hero {
   display: flex; /* Makes the container a flex container */
   padding: 24px 64px;
@@ -214,7 +248,7 @@ video {
 
 /* Footer styles */
 .footer {
-  background-color: var(--pink);
+  background-color: inherit;
   padding: 48px 64px;
   color: var(--black);
 }
@@ -406,8 +440,14 @@ section img, video {
 
 #image-double {
 display: flex;
-gap: 24px;
+gap: 48px;
 }
+
+
+#image-double img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  }
 
 
 #single-image {
@@ -439,9 +479,23 @@ gap: 24px;
     margin: 0;
   }
 
- .project-title {
+ .case-title {
   font-size: 2.4em;
   line-height: 1.6em;
   margin: 0;
   font-weight: 600;
+  }
+
+  .services-list {
+display: flex;
+flex-wrap: wrap;
+gap: 24px;
+  }
+
+  .service-item {
+flex: calc(45% - 64px);
+padding: 48px;
+border: 1px solid black;
+font-size: 1.4em;
+line-height: 1.6em;
   }
