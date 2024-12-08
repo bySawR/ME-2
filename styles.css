@@ -499,3 +499,15 @@ border: 1px solid black;
 font-size: 1.4em;
 line-height: 1.6em;
   }
+
+  /* Components */
+.menu-button:hover, .footer-cta:hover, .menu-items a:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 1024px) {
+  .container, .content, .header, .hero, .footer {
+      padding: 24px;
+      max-width: unset;
+  }
+}
